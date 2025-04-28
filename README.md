@@ -6,6 +6,8 @@ It comes with the [etaHEN v2.1b payload](https://github.com/etaHEN/etaHEN/releas
 
 The use of PROGMEM to store exploit files and `elfldr.elf` payload—preserving SPIFFS space for other payloads—was heavily inspired by [stooged's PS5-Server project](https://github.com/stooged/PS5-Server) and [0x1iii1ii's fork](https://github.com/0x1iii1ii/PS5-Server/).
 
+A precompiled `.bin` file can be downloaded from the [releases page](https://github.com/vladimir-cucu/esp-ps5-server-lite/releases). One way of flashing the `.bin` file to your ESP8266 board is by using the [NodeMCU PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher).
+
 ## TODO
 
 - Add ability to modify SSID, password, and payloads from the web interface.
