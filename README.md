@@ -8,6 +8,12 @@ The use of PROGMEM to store exploit files and `elfldr.elf` payload—preserving 
 
 A precompiled `.bin` file can be downloaded from the [releases page](https://github.com/vladimir-cucu/esp-ps5-server-lite/releases). One way of flashing the `.bin` file to your ESP8266 board is by using the [NodeMCU PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher).
 
+## Access Point Details
+```
+SSID: PS5_WEB_AP
+password: password
+```
+
 ## TODO
 
 - Add ability to modify SSID, password, and payloads from the web interface.
