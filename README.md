@@ -9,11 +9,22 @@ The use of PROGMEM to store exploit files and `elfldr.elf` payload—preserving 
 A precompiled `.bin` file can be downloaded from the [releases page](https://github.com/vladimir-cucu/esp-ps5-server-lite/releases). One way of flashing the `.bin` file to your ESP8266 board is by using the [NodeMCU PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher).
 
 ## Access Point Details
+
 ```
 SSID: PS5_WEB_AP
 password: password
 ```
 
-## TODO
+## Customization
 
-- Add ability to modify SSID, password, and payloads from the web interface.
+### Changing SSID and password
+
+To customize the WiFi access point, modify the `ssid` and `password` variables in the `esp-ps5-server-lite.ino` file.
+
+### Adding or Removing Payloads
+
+You can add or remove payloads to the `/data/payloads` folder. Additionally, you will need to update the contents of `/data/cache.appcache` and `/data/payload_map.js`. For example, in [this commit](https://github.com/vladimir-cucu/esp-ps5-server-lite/commit/3b84b714b6e35657c85a357fe4042fbb25a6943e), you can see the changes made to add the `byepervisor` payload and update the `etaHEN` payload.
+
+### Flashing the ESP8266
+
+To manually flash the ESP8266 after customization you can use [Arduino IDE 1.x](https://www.arduino.cc/en/software/) and [Arduino ESP8266 Filesystem Uploader](https://github.com/esp8266/arduino-esp8266fs-plugin). In the **Tools** menu, it is necessary to select the **Flash Size: "4MB (FS: 3MB OTA: ~512KB)"** option in order to have ~3MB for payloads.
