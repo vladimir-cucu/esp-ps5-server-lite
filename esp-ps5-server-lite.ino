@@ -12,7 +12,8 @@ const char* password = "password";
 ESP8266WebServer server(80);
 
 const char* payloadPaths[] = {
-  "/payloads/etaHEN-2.1b.bin",
+  "/payloads/byepervisor.elf.gz",
+  "/payloads/etaHEN-2.1b.bin.gz"
 };
 
 String getContentType(const String path) {

@@ -1,4 +1,4 @@
-CACHE MANIFEST # v1.00
+CACHE MANIFEST # v1.01
 index.html
 custom_host_stuff.js
 int64.js
@@ -48,5 +48,6 @@ psfree/module/memtools.js
 psfree/module/offset.js
 psfree/module/rw.js
 psfree/module/utils.js
+payloads/byepervisor.elf.gz
 payloads/elfldr.elf
-payloads/etaHEN-2.1b.bin
+payloads/etaHEN-2.1b.bin.gz
