@@ -37,7 +37,7 @@ Additionally, you will need to update the contents of `/data/cache.appcache` fil
 
 To manually flash the `.ino` file after customization, you can use [Arduino IDE 1.x](https://www.arduino.cc/en/software/) and the [Arduino ESP8266 Filesystem Uploader](https://github.com/esp8266/arduino-esp8266fs-plugin). It is recommended to select the **Flash Size: "4MB (FS: 3MB OTA: ~512KB)"** option in the **Tools** tab in order to have ~2.5MB available for payloads.
 
-**Note:** To continue redirecting **User's Guide** to the exploit page after flashing the `.ino` file, valid self-signed TLS certificate `ServerConfig::cert` and private key `ServerConfig::key` should be provided in `config.h` file.
+**Note:** To continue redirecting **User's Guide** to the exploit page after flashing the `.ino` file, valid self-signed TLS certificate `ServerConfig::cert` and private key `ServerConfig::key` should be provided in `config.h` file. For instance, you could use the certificate and key from [frwololo's PS4_PS5-ESP8266-Server project](https://github.com/frwololo/PS4_PS5-ESP8266-Server).
 
 ## Credits
 
