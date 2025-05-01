@@ -23,7 +23,7 @@ const payload_map = [
   {
     displayTitle: "Byepervisor HEN",
     description: "FPKG enabler",
-    fileName: "byepervisor.elf.gz",
+    fileName: "byepervisor.elf",
     author: "SpecterDev, ChendoChap, flatz, fail0verflow, Znullptr, kiwidog, sleirsgoevy, EchoStretch, LightningMods, BestPig, zecoxao", 
     projectSource: "https://github.com/EchoStretch/Byepervisor",
     binarySource: "https://github.com/EchoStretch/Byepervisor/actions/runs/14004003762",
@@ -34,10 +34,10 @@ const payload_map = [
   {
     displayTitle: "etaHEN",
     description: "AIO Homebrew enabler",
-    fileName: "etaHEN-2.1b.bin.gz",
+    fileName: "etaHEN-2.1B.bin",
     author: "LightningMods, Buzzer, sleirsgoevy, ChendoChap, astrelsky, illusion, CTN, SiSTR0, Nomadic",
     projectSource: "https://github.com/etaHEN/etaHEN",
-    binarySource: "https://github.com/etaHEN/etaHEN/releases/download/2.1B/etaHEN.bin",
+    binarySource: "https://github.com/etaHEN/etaHEN/blob/ea3b04a60f911d31e3888a0f98a57b3cccfe787c/etaHEN-2.1B.bin",
     version: "2.1b",
     toPort: 9021
   }
