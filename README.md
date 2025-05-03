@@ -1,6 +1,6 @@
 # ESP8266 PlayStation 5 Web Exploit Server
 
-Lightweight web server for ESP8266 boards that hosts the [PlayStation 5 UMTX2 Jailbreak](https://github.com/idlesauce/umtx2) for firmware versions 1.00–5.50, with minor modifications to enable caching. The following payloads are currently preloaded: [etaHEN v2.1b](https://github.com/etaHEN/etaHEN/releases/tag/2.1B), [byepervisor](https://github.com/PS5Dev/Byepervisor) and [elfldr](https://github.com/ps5-payload-dev/elfldr).
+Lightweight web server for ESP8266 boards that hosts the [PlayStation 5 UMTX2 Jailbreak](https://github.com/idlesauce/umtx2) for firmware versions 1.00–5.50, with minor modifications to enable caching. The following payloads are preloaded: [etaHEN v2.1b](https://github.com/etaHEN/etaHEN/releases/tag/2.1B), [byepervisor](https://github.com/PS5Dev/Byepervisor) and [elfldr](https://github.com/ps5-payload-dev/elfldr).
 
 ## Quick Setup Guide
 
@@ -11,13 +11,13 @@ Lightweight web server for ESP8266 boards that hosts the [PlayStation 5 UMTX2 Ja
 
 ### Accessing the Exploit Page from User's Guide
 
-You will need to use `v1.10` of the precompiled `.bin` file. Starting from `v1.11`, the User's Guide won't redirect to the exploit page. This is because an additional DNS Server and HTTPS Server is required for this feature to work, which makes the ESP8266 slow to provide the initial connection to your PS5 and the WiFi has connection issues when using an FTP server.
+You will need to use `v1.10` of the precompiled `.bin` file. Starting from `v1.11`, the User's Guide no longer redirects to the exploit page. This is because additional DNS and HTTPS Servers are required for this feature to work, which makes the ESP8266 slow to provide the initial connection to your PS5 and WiFi connectivity issues can occur when using an FTP server.
 
-I recommend you download and install [ESP Host FPKG](https://www.mediafire.com/file/w4e6hiuwfoj8dnb/esphost.zip) after successfully jailbreaking your console. Use it to open the cached exploit page in the future. All precompiled `.bin` files work with ESP Host FKPG.
+I recommend you download and install [ESP Host FPKG](https://www.mediafire.com/file/w4e6hiuwfoj8dnb/esphost.zip) after successfully jailbreaking your console. Use it to open the cached exploit page in the future. All precompiled `.bin` files work with ESP Host FPKG.
 
 ### Accessing the Exploit Page from ESP Host FPKG
 
-The exploit is served at `http://10.1.1.1/index.html`, thus, you can use [ESP Host FPKG](https://www.mediafire.com/file/w4e6hiuwfoj8dnb/esphost.zip) to open the cached explotit page.
+The exploit is served at `http://10.1.1.1/index.html`, thus, you can use [ESP Host FPKG](https://www.mediafire.com/file/w4e6hiuwfoj8dnb/esphost.zip) to open the cached exploit page.
 
 ### Flashing Ready-To-Use `.bin` File
 
