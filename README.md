@@ -9,13 +9,15 @@ Lightweight web server for ESP8266 boards that hosts the [PlayStation 5 UMTX2 Ja
 - SSID: `PS5_WEB_AP`
 - Password: `password`
 
-### Accessing the Exploit Page
+### Accessing the Exploit Page from User's Guide
 
-The exploit is served at `http://10.1.1.1/index.html`.
+You will need to use `v1.10` of the precompiled `.bin` file. Starting from `v1.11`, the User's Guide won't redirect to the exploit page. This is because an additional DNS Server and HTTPS Server is required for this feature to work, which makes the ESP8266 slow to provide the initial connection to your PS5 and the WiFi has connection issues when using an FTP server.
 
-To access the exploit page for the first time, from your PS5 console's home screen, go to **Settings > User's Guide, Health and Safety, and Other Information**.
+I recommend you download and install [ESP Host FPKG](https://www.mediafire.com/file/w4e6hiuwfoj8dnb/esphost.zip) after successfully jailbreaking your console. Use it to open the cached exploit page in the future. All precompiled `.bin` files work with ESP Host FKPG.
 
-After successfully jailbreaking your PS5, you can install the [ESP Host FPKG](https://www.mediafire.com/file/w4e6hiuwfoj8dnb/esphost.zip) to open the cached exploit page for offline use in the future.
+### Accessing the Exploit Page from ESP Host FPKG
+
+The exploit is served at `http://10.1.1.1/index.html`, thus, you can use [ESP Host FPKG](https://www.mediafire.com/file/w4e6hiuwfoj8dnb/esphost.zip) to open the cached explotit page.
 
 ### Flashing Ready-To-Use `.bin` File
 
@@ -29,9 +31,9 @@ To customize the WiFi access point, modify `ServerConfig::ssid` and `ServerConfi
 
 ### Changing Payloads
 
-You can change the payloads in `/data/payloads` folder. Only `.elf` and `.bin` payload formats are supported.
+`bypervisor` and `elfldr` payloads are preloaded. You can change the additional payloads in `/data/payloads` folder. You will also need to manually update the contents of `/data/cache.appcache` file and `/data/payload_map.js` file.
 
-Additionally, you will need to update the contents of `/data/cache.appcache` file, `/data/payload_map.js` file and `PayloadConfig::paths` in `config.h` file.
+Only `.elf` and `.bin` payload formats are currently supported.
 
 ### Flashing `.ino` File
 

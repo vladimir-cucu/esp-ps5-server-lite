@@ -1,10 +1,6 @@
 #include <BearSSLHelpers.h>
 #include <IPAddress.h>
 
-namespace PayloadConfig {
-  const char* paths[] = {"/payloads/etaHEN-2.1B.bin"};
-}
-
 namespace ServerConfig {
   const char* ssid = "PS5_WEB_AP";
   const char* password = "password";
