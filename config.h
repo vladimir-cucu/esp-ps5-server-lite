@@ -4,6 +4,7 @@
 namespace ServerConfig {
   const char* ssid = "PS5_WEB_AP";
   const char* password = "password";
+  const char* wifiCredentialsPath = "/wifi-credentials.config";
 
   IPAddress ip(10,1,1,1);
   IPAddress gateway(10,1,1,1);
