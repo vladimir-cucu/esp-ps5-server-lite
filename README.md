@@ -1,6 +1,8 @@
 # ESP8266 PlayStation 5 Web Exploit Server
 
-Lightweight web server for ESP8266 that hosts the [PlayStation 5 UMTX2 Jailbreak](https://github.com/idlesauce/umtx2) for firmware versions 1.00–5.50, with minor modifications to enable caching. The following payloads are preloaded: [etaHEN v2.1b](https://github.com/etaHEN/etaHEN/releases/tag/2.1B), [byepervisor](https://github.com/PS5Dev/Byepervisor) and [elfldr](https://github.com/ps5-payload-dev/elfldr).
+Lightweight web server for ESP8266 that hosts the [PlayStation 5 UMTX2 Jailbreak](https://github.com/idlesauce/umtx2) for firmware versions 1.00–5.50, with minor modifications to enable caching. The following payloads are preloaded: [etaHEN v2.1b](https://github.com/etaHEN/etaHEN/releases/tag/2.1B), [byepervisor](https://github.com/PS5Dev/Byepervisor), [kstuff](https://github.com/EchoStretch/kstuff), [kstuff-toggle](https://github.com/EchoStretch/kstuff-toggle) and [elfldr](https://github.com/ps5-payload-dev/elfldr).
+
+**Note: ESP32 support will be added in the coming weeks, once I get my hands on one.**
 
 ## Quick Setup Guide
 
@@ -25,13 +27,15 @@ Lightweight web server for ESP8266 that hosts the [PlayStation 5 UMTX2 Jailbreak
 
 ## Configuration and Customization
 
+![Admin page](assets/admin-page.png)
+
 ### Changing WiFi SSID and Password
 
 Access `http://10.1.1.1/admin.html` to change the WiFi SSID and Password. SSID has to be at least 4 characters long and should contain at most 32 characters. Password has to be at least 8 characters long and should contain at most 64 characters.
 
 ### Changing payloads
 
-Access `http://10.1.1.1/admin.html` to change the payloads. When updating payloads, make sure that a valid `payload_map.js` and `cache.appcache` are provided, and that the total size of the uploaded payloads does not exceed 2.5MB. `byepervisor` and `elfldr` are loaded from PROGMEM, so you don't need to upload these payloads. However, in order to use `byepervisor` payload, you need to point to `byepervisor.elf` in `payload_map.js` file.
+Access `http://10.1.1.1/admin.html` to change the payloads. When updating payloads, make sure that a valid `payload_map.js` and `cache.appcache` are provided, and that the total size of the uploaded payloads does not exceed 2.5MB. `byepervisor`, `kstuff-toggle` and `elfldr` are loaded from PROGMEM, so you don't need to upload these payloads.
 
 ### Manually flashing `.ino` File using Arduino IDE 2.x
 
