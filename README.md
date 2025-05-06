@@ -29,6 +29,8 @@ Lightweight web server for ESP8266 that hosts the [PlayStation 5 UMTX2 Jailbreak
 
 ![Admin page](assets/admin-page.png)
 
+*Screenshot of the Admin Page hosted at `http://10.1.1.1/admin.html`.*
+
 ### Changing WiFi SSID and Password
 
 Access `http://10.1.1.1/admin.html` to change the WiFi SSID and Password. SSID has to be at least 4 characters long and should contain at most 32 characters. Password has to be at least 8 characters long and should contain at most 64 characters.
