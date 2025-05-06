@@ -34,11 +34,33 @@ const payload_map = [
   {
     displayTitle: "etaHEN",
     description: "AIO Homebrew enabler",
-    fileName: "etaHEN-2.1B.bin",
+    fileName: "etaHEN.bin.gz",
     author: "LightningMods, Buzzer, sleirsgoevy, ChendoChap, astrelsky, illusion, CTN, SiSTR0, Nomadic",
     projectSource: "https://github.com/etaHEN/etaHEN",
     binarySource: "https://github.com/etaHEN/etaHEN/blob/ea3b04a60f911d31e3888a0f98a57b3cccfe787c/etaHEN-2.1B.bin",
     version: "2.1b",
+    toPort: 9021
+  },
+  {
+    displayTitle: "kstuff",
+    description: "FPKG enabler",
+    fileName: "kstuff.elf.gz",
+    author: "sleirsgoevy, john-tornblom, EchoStretch, buzzer-re, BestPig, LightningMods, zecoxao",
+    projectSource: "https://github.com/EchoStretch/kstuff",
+    binarySource: "https://github.com/EchoStretch/kstuff/actions/runs/14825864251",
+    version: "1.5",
+    supportedFirmwares: ["3.", "4.", "5."],
+    toPort: 9021
+  },
+  {
+    displayTitle: "kstuff-toggle",
+    description: "FPKG enabler toggle",
+    fileName: "kstuff-toggle.elf",
+    author: "EchoStretch",
+    projectSource: "https://github.com/EchoStretch/kstuff-toggle",
+    binarySource: "https://github.com/EchoStretch/kstuff-toggle/actions/runs/14787109677",
+    version: "0.1b",
+    supportedFirmwares: ["3.", "4.", "5."],
     toPort: 9021
   }
 ];
