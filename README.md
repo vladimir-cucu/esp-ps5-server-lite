@@ -1,6 +1,6 @@
 # ESP8266 PlayStation 5 Web Exploit Server
 
-Lightweight web server for ESP8266 boards that hosts the [PlayStation 5 UMTX2 Jailbreak](https://github.com/idlesauce/umtx2) for firmware versions 1.00–5.50, with minor modifications to enable caching. The following payloads are preloaded: [etaHEN v2.1b](https://github.com/etaHEN/etaHEN/releases/tag/2.1B), [byepervisor](https://github.com/PS5Dev/Byepervisor) and [elfldr](https://github.com/ps5-payload-dev/elfldr).
+Lightweight web server for ESP8266 that hosts the [PlayStation 5 UMTX2 Jailbreak](https://github.com/idlesauce/umtx2) for firmware versions 1.00–5.50, with minor modifications to enable caching. The following payloads are preloaded: [etaHEN v2.1b](https://github.com/etaHEN/etaHEN/releases/tag/2.1B), [byepervisor](https://github.com/PS5Dev/Byepervisor) and [elfldr](https://github.com/ps5-payload-dev/elfldr).
 
 ## Quick Setup Guide
 
@@ -9,19 +9,19 @@ Lightweight web server for ESP8266 boards that hosts the [PlayStation 5 UMTX2 Ja
 - SSID: `PS5_WEB_AP`
 - Password: `password`
 
-### Accessing the Exploit Page from ESP Host FPKG
+### Step-by-Step Installation and Usage
 
-The exploit is served at `http://10.1.1.1/index.html`. You can use [ESP Host FPKG](https://www.mediafire.com/file/w4e6hiuwfoj8dnb/esphost.zip) to access the exploit page directly. Once the page is cached, you can disconnect from internet and jailbreak your PS5 offline in the future.
+1. Download and install [NodeMCU PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher), or use any other ESP8266 flashing tool of your choice. You will use this tool to flash the precompiled `.bin` files.
 
-### Accessing the Exploit Page from User's Guide
+2. (Skip this step if you have ESP Host FPKG installed on your PS5.) Download the `esp8266-usersguideredirect-nocache.bin` file from the [releases page](https://github.com/vladimir-cucu/esp-ps5-exploit-server/releases) and flash it to your ESP8266. Connect your PS5 to the ESP8266's access point and open the User's Guide to access the exploit page. After successfully jailbreaking your PS5, install [ESP Host FPKG](https://www.mediafire.com/file/w4e6hiuwfoj8dnb/esphost.zip).
 
-You will need to use `v1.10` of the precompiled `.bin` file. Starting from `v1.11`, the User's Guide no longer redirects to the exploit page. This is because additional DNS and HTTPS Servers are required for this feature to work, which makes the ESP8266 slow to provide the initial connection to your PS5 and WiFi connectivity issues can occur when using an FTP server.
+3. Download the latest version of `esp8266-ps5-exploit-server-v1.xx.bin` from the [releases page](https://github.com/vladimir-cucu/esp-ps5-exploit-server/releases) and flash it to your ESP8266. Connect your PS5 to the ESP8266's access point and access the exploit page through ESP Host FPKG. Once the page is cached, you can disconnect from the internet and jailbreak your PS5 offline in the future.
 
-I recommend you download and install [ESP Host FPKG](https://www.mediafire.com/file/w4e6hiuwfoj8dnb/esphost.zip) after successfully jailbreaking your console.
+### Notes
 
-### Flashing Ready-To-Use `.bin` File
+- The `esp8266-usersguideredirect-nocache.bin` file is intended for **one-time use** during the initial installation. It does not cache the exploit and serves it at `http://10.10.10.10/index.html` to avoid conflicts with previously cached versions of the exploit accessed through the User's Guide.
 
-A ready-to-use `.bin` file can be downloaded from the [releases page](https://github.com/vladimir-cucu/esp-ps5-exploit-server/releases). One way to flash the `.bin` file to your ESP8266 board is by using the [NodeMCU PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher).
+- Starting from `v1.11` of `esp8266-ps5-exploit-server-v1.xx.bin` files, the User's Guide no longer redirects to the exploit page. This change is due to the need for additional DNS and HTTPS servers, which can slow down the initial connection and may cause WiFi instability—especially when using FTP on the PS5.
 
 ## Configuration and Customization
 
@@ -33,7 +33,7 @@ When updating payloads, make sure that a valid `payload_map.js` and `cache.appca
 
 ### Manually flashing `.ino` File using Arduino IDE 2.x
 
-To manually flash the `.ino` file after customization, you can use [Arduino IDE 2.x](https://www.arduino.cc/en/software/) and [Arduino LittleFS Upload](https://github.com/earlephilhower/arduino-littlefs-upload). It is recommended to select the **Flash Size: "4MB (FS: 3MB OTA: ~512KB)"** option in the **Tools** tab in order to have ~2.5MB available for payloads.
+To manually flash the `.ino` file, you can use [Arduino IDE 2.x](https://www.arduino.cc/en/software/) and [Arduino LittleFS Upload](https://github.com/earlephilhower/arduino-littlefs-upload). It is recommended to select the **Flash Size: "4MB (FS: 3MB OTA: ~512KB)"** option in the **Tools** tab in order to have ~2.5MB available for payloads.
 
 **Note:** To continue redirecting **User's Guide** to the exploit page after flashing the `.ino` file, valid self-signed TLS certificate `ServerConfig::cert` and private key `ServerConfig::key` should be provided in `config.h` file. For instance, you could use the certificate and key from [frwololo's PS4_PS5-ESP8266-Server project](https://github.com/frwololo/PS4_PS5-ESP8266-Server).
 
