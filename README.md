@@ -27,9 +27,9 @@ Lightweight web server for ESP8266 that hosts the [PlayStation 5 UMTX2 Jailbreak
 
 ### Changing SSID, Password and/or Payloads
 
-Access `http://10.1.1.1/admin.html` to customize the Access Point credentials and/or update the payloads.
+Access `http://10.1.1.1/admin.html` to customize the access point credentials and/or update the payloads.
 
-When updating payloads, make sure that a valid `payload_map.js` and `cache.appcache` are provided, and that the total size of the uploaded payloads does not exceed 2.5MB.
+When updating payloads, make sure that a valid `payload_map.js` and `cache.appcache` are provided, and that the total size of the uploaded payloads does not exceed 2.5MB. `byepervisor` and `elfldr` pyalods are loaded from PROGMEM, so you don't need to upload these payloads. However, in order to use `byepervisor` payload, you need to point to `byepervisor.elf` in `payload_map.js` file.
 
 ### Manually flashing `.ino` File using Arduino IDE 2.x
 
