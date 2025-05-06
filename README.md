@@ -4,32 +4,34 @@ Lightweight web server for ESP8266 that hosts the [PlayStation 5 UMTX2 Jailbreak
 
 ## Quick Setup Guide
 
-### Access Point Details
+### WiFi Details
 
 - SSID: `PS5_WEB_AP`
 - Password: `password`
 
 ### Step-by-Step Installation and Usage
 
-1. Download and install [NodeMCU PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher), or use any other ESP8266 flashing tool of your choice. You will use this tool to flash the precompiled `.bin` files.
+1. Download and install [NodeMCU PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher). You will use this tool to flash the precompiled `.bin` file.
 
-2. (Skip this step if you have ESP Host FPKG installed on your PS5.) Download the `esp8266-usersguideredirect-nocache.bin` file from the [releases page](https://github.com/vladimir-cucu/esp-ps5-exploit-server/releases) and flash it to your ESP8266. Connect your PS5 to the ESP8266's access point and open the User's Guide to access the exploit page. After successfully jailbreaking your PS5, install [ESP Host FPKG](https://www.mediafire.com/file/w4e6hiuwfoj8dnb/esphost.zip).
+2. **(Skip this step if you have ESP Host FPKG installed on your PS5!)** Download the `esp8266-usersguideredirect-nopayloads.bin` file from the [releases page](https://github.com/vladimir-cucu/esp-ps5-exploit-server/releases) and flash it to your ESP8266. Connect your PS5 to the ESP8266's WiFi and open the User's Guide to access the exploit page. After successfully jailbreaking your PS5, install [ESP Host FPKG](https://www.mediafire.com/file/w4e6hiuwfoj8dnb/esphost.zip) and follow the next step.
 
-3. Download the latest version of `esp8266-ps5-exploit-server-v1.xx.bin` from the [releases page](https://github.com/vladimir-cucu/esp-ps5-exploit-server/releases) and flash it to your ESP8266. Connect your PS5 to the ESP8266's access point and access the exploit page through ESP Host FPKG. Once the page is cached, you can disconnect from the internet and jailbreak your PS5 offline in the future.
+3. Download the `esp8266-ps5-exploit-server-v1.xx.bin` file from the [releases page](https://github.com/vladimir-cucu/esp-ps5-exploit-server/releases) and flash it to your ESP8266. Connect your PS5 to the ESP8266's WiFi and access the exploit page through ESP Host FPKG. Once the page is cached, you can disconnect from the internet and jailbreak your PS5 offline in the future.
 
-### Notes
+### Additional details
 
-- The `esp8266-usersguideredirect-nocache.bin` file is intended for **one-time use** during the initial installation. It does not cache the exploit and serves it at `http://10.10.10.10/index.html` to avoid conflicts with previously cached versions of the exploit accessed through the User's Guide.
+- The `esp8266-usersguideredirect-nopayloads.bin` file is intended for **one-time use** during the initial installation. It does not cache the exploit and serves it at a different URL in order to avoid conflicts with previously cached versions of the exploit accessed through the User's Guide.
 
-- Starting from `v1.11` of `esp8266-ps5-exploit-server-v1.xx.bin` files, the User's Guide no longer redirects to the exploit page. This change is due to the need for additional DNS and HTTPS servers, which can slow down the initial connection and may cause WiFi instability—especially when using FTP on the PS5.
+- When using `esp8266-ps5-exploit-server-v1.xx.bin`, the User's Guide no longer redirects to the exploit page. This is because additional DNS and HTTPS servers need to run for the redirect to function, which can slow down the initial connection and may cause WiFi instability—especially when using FTP on the PS5.
 
 ## Configuration and Customization
 
-### Changing SSID, Password and/or Payloads
+### Changing WiFi SSID and Password
 
-Access `http://10.1.1.1/admin.html` to customize the access point credentials and/or update the payloads.
+Access `http://10.1.1.1/admin.html` to change the WiFi SSID and Password. SSID has to be at least 4 characters long and should contain at most 32 characters. Password has to be at least 8 characters long and should contain at most 64 characters.
 
-When updating payloads, make sure that a valid `payload_map.js` and `cache.appcache` are provided, and that the total size of the uploaded payloads does not exceed 2.5MB. `byepervisor` and `elfldr` are loaded from PROGMEM, so you don't need to upload these payloads. However, in order to use `byepervisor` payload, you need to point to `byepervisor.elf` in `payload_map.js` file.
+### Changing payloads
+
+Access `http://10.1.1.1/admin.html` to change the payloads. When updating payloads, make sure that a valid `payload_map.js` and `cache.appcache` are provided, and that the total size of the uploaded payloads does not exceed 2.5MB. `byepervisor` and `elfldr` are loaded from PROGMEM, so you don't need to upload these payloads. However, in order to use `byepervisor` payload, you need to point to `byepervisor.elf` in `payload_map.js` file.
 
 ### Manually flashing `.ino` File using Arduino IDE 2.x
 
