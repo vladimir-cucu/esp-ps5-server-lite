@@ -1,4 +1,4 @@
-CACHE MANIFEST # v1.30
+CACHE MANIFEST # v1.31
 index.html
 custom_host_stuff.js
 int64.js
@@ -51,5 +51,6 @@ psfree/module/utils.js
 payloads/byepervisor.elf
 payloads/elfldr.elf
 payloads/kstuff-toggle.elf
+payloads/ftpsrv.elf
 payloads/etaHEN.bin.gz
 payloads/kstuff.elf.gz
