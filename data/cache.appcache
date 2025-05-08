@@ -1,4 +1,4 @@
-CACHE MANIFEST # v1.31
+CACHE MANIFEST # v1.32
 index.html
 custom_host_stuff.js
 int64.js
@@ -52,5 +52,6 @@ payloads/byepervisor.elf
 payloads/elfldr.elf
 payloads/kstuff-toggle.elf
 payloads/ftpsrv.elf
+/payloads/webkit-cache-remover.elf
 payloads/etaHEN.bin.gz
 payloads/kstuff.elf.gz

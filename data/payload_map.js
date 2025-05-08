@@ -21,7 +21,7 @@ const CUSTOM_ACTION_APPCACHE_REMOVE = "appcache-remove";
 */
 const payload_map = [
   {
-    displayTitle: "Byepervisor HEN",
+    displayTitle: "byepervisor",
     description: "FPKG enabler",
     fileName: "byepervisor.elf",
     author: "SpecterDev, ChendoChap, flatz, fail0verflow, Znullptr, kiwidog, sleirsgoevy, EchoStretch, LightningMods, BestPig, zecoxao", 
@@ -71,6 +71,16 @@ const payload_map = [
     projectSource: "https://github.com/ps5-payload-dev/ftpsrv",
     binarySource: "https://github.com/ps5-payload-dev/pacbrew-repo/actions/runs/14012252230",
     version: "0.11.3",
+    toPort: 9021
+  },
+  {
+    displayTitle: "webkit-cache-remover",
+    description: "Removes the WebKit cache for all users.",
+    fileName: "webkit-cache-remover.elf",
+    author: "vladimir-cucu",
+    projectSource: "https://github.com/vladimir-cucu/ps5-webkit-cache-remover",
+    binarySource: "https://github.com/vladimir-cucu/ps5-webkit-cache-remover/releases/tag/v1.00",
+    version: "1.00",
     toPort: 9021
   }
 ];
