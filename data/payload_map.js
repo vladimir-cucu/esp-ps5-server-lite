@@ -79,8 +79,8 @@ const payload_map = [
     fileName: "webkit-cache-remover.elf",
     author: "vladimir-cucu",
     projectSource: "https://github.com/vladimir-cucu/ps5-webkit-cache-remover",
-    binarySource: "https://github.com/vladimir-cucu/ps5-webkit-cache-remover/releases/tag/v1.00",
-    version: "1.00",
+    binarySource: "https://github.com/vladimir-cucu/ps5-webkit-cache-remover/releases/tag/v1.01",
+    version: "1.01",
     toPort: 9021
   }
 ];
